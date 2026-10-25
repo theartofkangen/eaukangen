@@ -1,0 +1,12 @@
+# ── kangenwater.ma : version anglaise (meme site Netlify) ──
+https://www.kangenwater.ma/*         https://kangenwater.ma/:splat  301!
+https://kangenwater.ma/robots.txt    /robots-en.txt                 200!
+https://kangenwater.ma/sitemap.xml   /sitemap-en.xml                200!
+https://kangenwater.ma/              /index-en.html                 200!
+https://kangenwater.ma/index.html    https://kangenwater.ma/        301!
+https://kangenwater.ma/en            https://kangenwater.ma/        301!
+https://kangenwater.ma/en/*          https://kangenwater.ma/        301!
+
+# ── eaukangen.ma : version francaise ; anciens liens /en -> kangenwater.ma ──
+/en                https://kangenwater.ma/   301!
+/en/*              https://kangenwater.ma/   301!
