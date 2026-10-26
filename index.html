@@ -1989,6 +1989,9 @@ body:has(.mobile-drawer.open) .wa-float{display:none !important}
 .btn-wa-main{display:inline-flex;align-items:center;justify-content:center;background:#25D366;color:white !important;font-size:14px;font-weight:600;letter-spacing:1px;padding:16px 32px;border-radius:8px;text-decoration:none;transition:background .2s,transform .2s}
 .btn-wa-main:hover{background:#1ebe5b;transform:translateY(-1px)}
 @media(max-width:640px){.btn-wa-main{width:100%}}
+
+.kf-cond{display:none}
+.kf-cond.show{display:block}
 </style>
 </head>
 <body>
@@ -3383,8 +3386,16 @@ body:has(.mobile-drawer.open) .wa-float{display:none !important}
 <select id="kf-prefiltre" name="prefiltration" required=""><option data-en="Choose…" value="">Choisir…</option><option data-en="Yes, a filter">Oui, un filtre</option><option data-en="Yes, reverse osmosis">Oui, un osmoseur</option><option data-en="No">Non</option><option data-en="I don’t know">Je ne sais pas</option></select>
 </div>
 <div class="kf-field kf-full">
-<label data-en="Who recommended Kangen Water® to you? *" for="kf-reco">Qui vous a recommandé la solution Eau Kangen® ? *</label>
-<input data-en-attr='{"placeholder": "Person’s name"}' id="kf-reco" name="recommande_par" placeholder="Nom de la personne" required="" type="text"/>
+<label data-en="How did you hear about Kangen Water®? *" for="kf-source">Comment avez-vous connu l'eau Kangen® ? *</label>
+<select id="kf-source" name="source" required=""><option data-en="Choose…" value="">Choisir…</option><option data-en="Recommended by someone" data-reco="1">Recommandation d’une personne</option><option data-en="Instagram">Instagram</option><option data-en="Facebook">Facebook</option><option data-en="Google search">Recherche Google</option><option data-en="WhatsApp">WhatsApp</option><option data-en="Fair, event or demonstration">Salon, événement ou démonstration</option><option data-en="Other">Autre</option></select>
+</div>
+<div class="kf-field kf-full kf-cond" id="kf-reco-wrap">
+<label data-en="Name of the person who recommended us *" for="kf-reco">Nom de la personne qui vous a recommandé *</label>
+<input data-en-attr='{"placeholder": "First and last name"}' id="kf-reco" name="recommande_par" placeholder="Prénom et nom" type="text"/>
+</div>
+<div class="kf-field kf-full">
+<label data-en="Preferred time to be contacted *" for="kf-creneau">Créneau préféré pour être contacté(e) *</label>
+<select id="kf-creneau" name="creneau" required=""><option data-en="Choose…" value="">Choisir…</option><option data-en="Morning (9am – 12pm)">Matin (9h – 12h)</option><option data-en="Midday (12pm – 2pm)">Midi (12h – 14h)</option><option data-en="Afternoon (2pm – 6pm)">Après-midi (14h – 18h)</option><option data-en="Evening (6pm – 9pm)">Soir (18h – 21h)</option><option data-en="Any time">Peu importe</option></select>
 </div>
 <div class="kf-field kf-full">
 <label data-en="Message (optional)" for="kf-msg">Message (facultatif)</label>
@@ -3433,7 +3444,7 @@ body:has(.mobile-drawer.open) .wa-float{display:none !important}
 &lt;p&gt;Contact email: &lt;a href=&quot;mailto:theartofkangen@gmail.com&quot;&gt;theartofkangen@gmail.com&lt;/a&gt;&lt;/p&gt;
 &lt;h3&gt;2. Data collected&lt;/h3&gt;
 &lt;p&gt;When you use the “Your Kangen® project” form, we collect the following data:&lt;/p&gt;
-&lt;ul&gt;&lt;li&gt;First and last name&lt;/li&gt;&lt;li&gt;Phone number&lt;/li&gt;&lt;li&gt;Email address&lt;/li&gt;&lt;li&gt;City&lt;/li&gt;&lt;li&gt;Country of residence and installation country&lt;/li&gt;&lt;li&gt;Machine of interest, installation location, number of users and pre-filtration equipment&lt;/li&gt;&lt;li&gt;Name of the person who recommended us&lt;/li&gt;&lt;li&gt;Free-text message (optional)&lt;/li&gt;&lt;/ul&gt;
+&lt;ul&gt;&lt;li&gt;First and last name&lt;/li&gt;&lt;li&gt;Phone number&lt;/li&gt;&lt;li&gt;Email address&lt;/li&gt;&lt;li&gt;City&lt;/li&gt;&lt;li&gt;Country of residence and installation country&lt;/li&gt;&lt;li&gt;Machine of interest, installation location, number of users and pre-filtration equipment&lt;/li&gt;&lt;li&gt;How you heard about us and, where applicable, the name of the person who recommended us&lt;/li&gt;&lt;li&gt;Your preferred time to be contacted&lt;/li&gt;&lt;li&gt;Free-text message (optional)&lt;/li&gt;&lt;/ul&gt;
 &lt;p&gt;If you message us on WhatsApp, we also receive the information you choose to send us.&lt;/p&gt;
 &lt;p&gt;No tracking or profiling cookies are used on this site.&lt;/p&gt;
 &lt;h3&gt;3. Purpose of processing&lt;/h3&gt;
@@ -3466,7 +3477,7 @@ body:has(.mobile-drawer.open) .wa-float{display:none !important}
 <p>Email de contact : <a href="mailto:theartofkangen@gmail.com">theartofkangen@gmail.com</a></p>
 <h3>2. Données collectées</h3>
 <p>Lorsque vous utilisez le formulaire « Votre projet Kangen® », nous collectons les données suivantes :</p>
-<ul><li>Nom et prénom</li><li>Numéro de téléphone</li><li>Adresse email</li><li>Ville</li><li>Pays de résidence et pays d'installation</li><li>Appareil qui vous intéresse, lieu d'installation, nombre d'utilisateurs et équipement de préfiltration</li><li>Nom de la personne qui vous a recommandé</li><li>Message libre (facultatif)</li></ul>
+<ul><li>Nom et prénom</li><li>Numéro de téléphone</li><li>Adresse email</li><li>Ville</li><li>Pays de résidence et pays d'installation</li><li>Appareil qui vous intéresse, lieu d'installation, nombre d'utilisateurs et équipement de préfiltration</li><li>La façon dont vous nous avez connus et, le cas échéant, le nom de la personne qui vous a recommandé</li><li>Votre créneau préféré pour être contacté(e)</li><li>Message libre (facultatif)</li></ul>
 <p>Si vous nous écrivez sur WhatsApp, nous recevons également les informations que vous choisissez de nous transmettre.</p>
 <p>Aucun cookie de suivi ou de profilage n'est utilisé sur ce site.</p>
 <h3>3. Finalités du traitement</h3>
@@ -3654,7 +3665,8 @@ function switchVid(id,btn){
 const KANGEN_WA='212647831295';
 const KANGEN_EMAIL='theartofkangen@gmail.com';
 function sendKangen(mode){
-  const ids=['kf-nom','kf-tel','kf-email','kf-ville','kf-pays','kf-pays-inst','kf-appareil','kf-lieu','kf-personnes','kf-prefiltre','kf-reco'];
+  const isReco=()=>{const o=document.getElementById('kf-source').selectedOptions[0];return !!(o&&o.dataset.reco);};
+  const ids=['kf-nom','kf-tel','kf-email','kf-ville','kf-pays','kf-pays-inst','kf-appareil','kf-lieu','kf-personnes','kf-prefiltre','kf-source','kf-creneau'].concat(isReco()?['kf-reco']:[]);
   let ok=true;
   ids.forEach(id=>{const el=document.getElementById(id);const v=el.value.trim();const bad=!v||(el.type==='email'&&!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v));el.classList.toggle('kf-invalid',bad);if(bad)ok=false;});
   const cb=document.getElementById('kf-consent');const cbl=cb.closest('.kf-consent');cbl.classList.toggle('kf-invalid',!cb.checked);
@@ -3663,7 +3675,7 @@ function sendKangen(mode){
   if(!ok){err.textContent=L('Merci de remplir tous les champs obligatoires (*).','Please fill in all required fields (*).');return;}
   err.textContent='';
   const g=id=>document.getElementById(id).value.trim();
-  const lines=[L('Bonjour, voici mon projet Kangen® :','Hello, here is my Kangen® project:'),'',L('Nom : ','Name: ')+g('kf-nom'),L('Téléphone : ','Phone: ')+g('kf-tel'),L('Email : ','Email: ')+g('kf-email'),L('Ville : ','City: ')+g('kf-ville'),L('Pays de résidence : ','Country of residence: ')+g('kf-pays'),L('Installation prévue : ','Installation planned: ')+g('kf-pays-inst'),L('Appareil : ','Machine: ')+g('kf-appareil'),L('Installation : ','Installation: ')+g('kf-lieu'),L('Personnes : ','People: ')+g('kf-personnes'),L('Préfiltration : ','Pre-filtration: ')+g('kf-prefiltre'),L('Recommandé par : ','Recommended by: ')+g('kf-reco')];
+  const lines=[L('Bonjour, voici mon projet Kangen® :','Hello, here is my Kangen® project:'),'',L('Nom : ','Name: ')+g('kf-nom'),L('Téléphone : ','Phone: ')+g('kf-tel'),L('Email : ','Email: ')+g('kf-email'),L('Ville : ','City: ')+g('kf-ville'),L('Pays de résidence : ','Country of residence: ')+g('kf-pays'),L('Installation prévue : ','Installation planned: ')+g('kf-pays-inst'),L('Appareil : ','Machine: ')+g('kf-appareil'),L('Installation : ','Installation: ')+g('kf-lieu'),L('Personnes : ','People: ')+g('kf-personnes'),L('Préfiltration : ','Pre-filtration: ')+g('kf-prefiltre'),L('Nous a connus via : ','Heard about us via: ')+g('kf-source')].concat(isReco()?[L('Recommandé par : ','Recommended by: ')+g('kf-reco')]:[]).concat([L('Créneau préféré : ','Preferred time: ')+g('kf-creneau')]);
   if(g('kf-msg'))lines.push('',L('Message : ','Message: ')+g('kf-msg'));
   const text=lines.join('\n');
   if(mode==='wa'){window.open('https://wa.me/'+KANGEN_WA+'?text='+encodeURIComponent(text),'_blank');}
@@ -3888,6 +3900,11 @@ function sendKangen(mode){
 
 // ─── MENU MOBILE : « Pour qui ? » repliable ───
 (function(){document.querySelectorAll('.drawer-group-btn').forEach(function(b){b.addEventListener('click',function(){var g=b.closest('.drawer-group');var o=g.classList.toggle('open');b.setAttribute('aria-expanded',o);});});})();
+
+// ─── FORMULAIRE : champ « nom de la personne » si recommandation ───
+(function(){var sel=document.getElementById('kf-source'),w=document.getElementById('kf-reco-wrap'),inp=document.getElementById('kf-reco');if(!sel||!w)return;
+function up(){var o=sel.selectedOptions[0];var on=!!(o&&o.dataset.reco);w.classList.toggle('show',on);inp.required=on;if(!on){inp.value='';inp.classList.remove('kf-invalid');}}
+sel.addEventListener('change',up);up();})();
 </script>
 </body>
 </html>
